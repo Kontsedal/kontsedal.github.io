@@ -8,6 +8,7 @@
     * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -21,15 +22,15 @@
       border-bottom: 1px solid silver;
       background-color: white;
       transition: all 0.5s;
-      top:0;
+      top: 0;
     }
 
-    ul {
+    nav ul {
       width: 100%;
       display: table;
     }
 
-    li {
+    nav ul li {
       display: table-cell;
       text-align: center;
       line-height: 50px;
@@ -69,6 +70,7 @@
     .block {
       height: 700px;
       background-color: #91e6c8;
+      padding: 60px 0 0 60px;
     }
 
     .gradiento {
@@ -97,27 +99,65 @@
 
     .egged {
       color: #f3fb92!important;
-
     }
-    .menu1{
+
+    .menu1 {
       border-width: 2px;
     }
-    .menu2{
-  border-width: 3px;
+
+    .menu2 {
+      border-width: 3px;
     }
-    .menu3{
-  border-width: 4px;
+
+    .menu3 {
+      border-width: 4px;
     }
-    .menu4{
-  border-width: 5px;
+
+    .menu4 {
+      border-width: 5px;
     }
-    .menu5{
-        top:-25px;
-  border-width: 6px;
+
+    .menu5 {
+      top: -25px;
+      border-width: 6px;
     }
-    .menu6{
-      top:inherit;
-        bottom: 0px;
+
+    .menu6 {
+      top: inherit;
+      bottom: 0px;
+    }
+
+    aside {
+      position: fixed;
+      height: calc(100% - 100px);
+      left: 0;
+      top: 50px;
+      width: 50px;
+    }
+
+    aside ul {
+      display: table;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border-right: 1px solid silver;
+    }
+
+    aside ul li {
+      display: table-row;
+
+      font-size: 20px;
+      text-align: center;
+    }
+    aside ul li a{
+        display: table-cell;
+vertical-align: middle;
+    }
+    h1, h2{
+      padding: 10px 0;
+    }
+    .highlight{
+      background-color: rgb(167, 219, 238);
     }
   </style>
 </head>
@@ -129,21 +169,192 @@
       <li data-addToTop="-70" data-addToBottom="70" data-hihglight="#block2"><a href="#">Link2</a></li>
       <li data-activeClass="gradiento, egged|gradiento" data-hihglight=".block3|#block6|.block4"><a href="#">Link3</a></li>
       <li data-activeClass="customActive2" data-hihglight=".block4"><a href="#">Link4</a></li>
-      <li data-addToTop="-70"  data-hihglight="#block5"><a href="#">Link5</a></li>
+      <li data-addToTop="-70" data-hihglight="#block5"><a href="#">Link5</a></li>
       <li data-activeClass="customActive3" data-hihglight="#block6"><a href="#">Link6</a></li>
       <li data-hihglight=".block7"><a href="#">Link</a></li>
     </ul>
   </nav>
+  <aside>
+    <ul>
+      <li data-addToTop="-60" data-activeClass="highlight" data-hihglight="h1"><a>H1</a></li>
+      <li  data-addToTop="-60" data-activeClass="highlight" data-hihglight="h2"><a>H2</a></li>
+      <li  data-addToTop="-60" data-activeClass="highlight" data-hihglight="p"><a>P</a></li>
+      <li  data-addToTop="-60" data-activeClass="highlight" data-hihglight="img"><a>IMG</a></li>
+      <li  data-addToTop="-60" data-activeClass="highlight" data-hihglight="div"><a>DIV</a></li>
+    </ul>
+  </aside>
   <div class="container">
-    <div class="block block1"></div>
-    <div id="block2" class="block"></div>
-    <div class="block block3"></div>
-    <div class="block block4"></div>
-    <div id="block5" class="block "></div>
-    <div id="block6" class="block"></div>
-    <div  class="block block7"></div>
+    <div class="block block1">
+      <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh </h1>
+      <h2>auris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+      lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+       Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit</h2>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+          elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+           porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+           lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+            Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+             quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
+              tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam,
+               a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+                Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
+                luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante
+                 ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+       </p>
+       <img src="/img/img.jpg" alt="">
+
+    </div>
+    <div id="block2" class="block">
+      <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh </h1>
+      <h2>auris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+      lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+       Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit</h2>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+          elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+           porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+           lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+            Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+             quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
+              tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam,
+               a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+                Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
+                luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante
+                 ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+       </p>
+       <img src="/img/img.jpg" alt="">
+    </div>
+    <div class="block block3">
+      <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh </h1>
+      <h2>auris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+      lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+       Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit</h2>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+          elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+           porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+           lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+            Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+             quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
+              tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam,
+               a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+                Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
+                luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante
+                 ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+       </p>
+       <img src="/img/img.jpg" alt="">
+    </div>
+    <div class="block block4">
+      <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh </h1>
+      <h2>auris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+      lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+       Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit</h2>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+          elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+           porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+           lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+            Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+             quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
+              tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam,
+               a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+                Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
+                luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante
+                 ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+       </p>
+       <img src="/img/img.jpg" alt="">
+    </div>
+    <div id="block5" class="block ">
+      <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh </h1>
+      <h2>auris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+      lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+       Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit</h2>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+          elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+           porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+           lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+            Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+             quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
+              tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam,
+               a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+                Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
+                luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante
+                 ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+       </p>
+       <img src="/img/img.jpg" alt="">
+    </div>
+    <div id="block6" class="block">
+      <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh </h1>
+      <h2>auris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+      lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+       Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit</h2>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+          elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+           porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+           lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+            Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+             quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
+              tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam,
+               a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+                Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
+                luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante
+                 ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+       </p>
+       <img src="/img/img.jpg" alt="">
+    </div>
+    <div class="block block7">
+      <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh </h1>
+      <h2>auris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+      lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+       Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit</h2>
+       <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+          Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+          elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
+           porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora
+           torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim
+           lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.
+            Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit
+             quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel,
+              tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam,
+               a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.
+                Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus
+                luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante
+                 ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.
+       </p>
+       <img src="/img/img.jpg" alt="">
+    </div>
   </div>
-  <script  src="https://cdn.rawgit.com/Kontsedal/javascript-ScrollHighlighter/master/dist/ScrollHighlighter.min.js">
+  <script src="https://cdn.rawgit.com/Kontsedal/javascript-ScrollHighlighter/master/dist/ScrollHighlighter.min.js">
   </script>
   <script>
     var highlighter = new ScrollHighlighter();
